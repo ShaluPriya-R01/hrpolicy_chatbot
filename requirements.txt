@@ -1,0 +1,13 @@
+streamlit
+pymupdf
+requests
+langchain
+sentence-transformers
+faiss-cpu
+llama-cpp-python
+langchain_community
+# streamlit
+# pymupdf
+# spacy
+# fuzzywuzzy
+# python-Levenshtein  # Required for fuzzywuzzy to work efficiently
