@@ -53,17 +53,27 @@ chatbot/
 │── screenshots/         # Folder to store UI screenshots
 │   ├── chatbot_ui_1.png
 │   ├── chatbot_ui_2.png
-│── chatbot.py
-│── app.py
+│── preprocess.py        # Script to process PDFs before running the chatbot
+│── chatbot.py           # Main chatbot logic            
 │── requirements.txt
 ```
 
-### 5️⃣ Run the Chatbot
+### 5️⃣ Preprocess PDFs
+
+Before running the chatbot, preprocess the HR policy documents by executing:
+
+```sh
+python preprocess.py
+```
+
+This will create the required `.pkl` file for faster queries.
+
+### 6️⃣ Run the Chatbot
 
 Start the chatbot by running:
 
 ```sh
-python app.py
+python chatbot.py
 ```
 
 This will launch the chatbot UI in your web browser.
@@ -73,8 +83,9 @@ This will launch the chatbot UI in your web browser.
 ## 💡 Usage Instructions
 
 1. **Upload HR policy PDFs** into the `pdf_files/pdfs/` folder.
-2. **Start the chatbot** using `python app.py`.
-3. **Ask your HR policy-related queries**, and the chatbot will fetch relevant answers from the documents.
+2. **Run the preprocessing step** using `python preprocess.py`.
+3. **Start the chatbot** using `python chatbot.py`.
+4. **Ask your HR policy-related queries**, and the chatbot will fetch relevant answers from the documents.
 
 ---
 
@@ -96,7 +107,8 @@ If you encounter issues:
 
 - Ensure all dependencies are installed correctly (`pip install -r requirements.txt`)
 - Check that the **Mistral 7B model** is downloaded in the `models/` directory
-- Run `python app.py` from the project directory
+- Ensure the preprocessing step (`preprocess.py`) is completed before running `chatbot.py`
+- Run `python chatbot.py` from the project directory
 
 ---
 
@@ -109,5 +121,6 @@ Feel free to **fork this repository** and improve the chatbot! PRs are welcome. 
 ## 🐜 License
 
 This project is licensed under the MIT License. See `LICENSE` for details.
+
 
 
